@@ -1,10 +1,17 @@
-import App from "./pages/signUp.tsx"
+import { Routes, Route } from "react-router-dom";
+import Sign from "./pages/signUp.tsx"
+import Home from "./pages/Home.tsx"
+import Play from "./pages/Play.tsx"
+import End from "./pages/End.tsx"
+
 
 export default function App() {
     return (
-        <main className="flex items-center justify-center md:p-6 lg:p-0">
-            <h1 className="font-heading font-bold">Hello</h1>
-            <button className="btn-primary font-sans">Click Me</button>
-        </main>
+        <Routes>
+            <Route path="/" element={<Sign />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/play" element={<Play />} />
+            <Route path="/end" element={<End />} />
+        </Routes>
     )
 }
