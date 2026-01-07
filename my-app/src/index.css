@@ -6,6 +6,7 @@
 @theme {
     --font-sans: 'Inter', sans-serif;
     --font-heading: 'Manrope', sans-serif;
+
     --color-primary: rgb(40 106 73);
     --color-on-primary: rgb(255 255 255);
     --color-primary-container: rgb(173 242 199);
@@ -67,6 +68,18 @@
     --color-dark-outline-variant: rgb(64 73 66);
 
     --color-dark-shadow: rgb(0 0 0);
+}
+@layer base {
+    body {
+        box-sizing: border-box;
+        font-family: var(--font-sans);
+        background-color: var(--color-surface-variant);
+        color: var(--color-on-surface-variant);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-heading);
+    }
 }
 @layer components {
     .btn-primary {
