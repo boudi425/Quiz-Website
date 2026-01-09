@@ -85,6 +85,6 @@
 }
 @layer components {
     .btn-primary {
-        @apply bg-primary text-on-primary px-4 py-4 w-40 rounded-md dark:bg-dark-primary dark:text-dark-on-primary;
+        @apply bg-primary text-on-primary px-4 py-4 w-30 rounded-md dark:bg-dark-primary dark:text-dark-on-primary;
     }
 }
