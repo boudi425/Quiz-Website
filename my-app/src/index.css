@@ -14,7 +14,7 @@
 
     --color-secondary: rgb(78 99 85);
     --color-on-secondary: rgb(255 255 255);
-    --secondary-container: rgb(208 232 214);
+    --color-secondary-container: rgb(208 232 214);
     --color-on-secondary-container: rgb(55 75 62);
 
     --color-tertiary: rgb(60 100 113);
@@ -37,6 +37,8 @@
     --color-on-background: rgb(23 29 25);
 
     --color-shadow: rgb(0 0 0);
+    --shadow-inset-B: inset 0 4px 4px rgba(0, 0, 0, 25%);
+
     --color-dark-primary: rgb(146 213 172);
     --color-dark-surface-tint: rgb(146 213 172);
     --color-dark-on-primary: rgb(0 57 33);
@@ -83,6 +85,6 @@
 }
 @layer components {
     .btn-primary {
-        @apply bg-primary text-on-primary px-4 py-2 rounded-md dark:bg-dark-primary dark:text-dark-on-primary;
+        @apply bg-primary text-on-primary px-4 py-4 w-40 rounded-md dark:bg-dark-primary dark:text-dark-on-primary;
     }
 }
