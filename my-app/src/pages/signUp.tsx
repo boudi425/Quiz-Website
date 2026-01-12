@@ -5,7 +5,7 @@ import { Combobox } from "@headlessui/react";
 
 import { useState } from "react";
 const options = ["Easy", "Medium", "Hard"];
-const subjects = ["Math", "Science", "History", "Literature", "Art", "Music", "Physical Education", "Computer Science"];
+const subjects = ["Physics", "Mathematics", "Biology", "Chemistry", "EarthScience", "ComputerScience"];
 export default function App() {
     const navigate = useNavigate();
     const [userName, setUserName] = useState<string>("");
