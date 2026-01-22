@@ -1,14 +1,12 @@
 import Icon from "../images/Quiz app Icon.png";
-import Profile from "../images/user.png";
+import Profile from "../images/Profile Icon.jpg";
 
-export default function Header({ For, Action }: { For: string, Action?: () => void }) {
-    localStorage.setItem("userName", "Boudi");
-
-    const userName = localStorage.getItem("userName");
+export default function Header({ For, Action }: { For: "Sign" | "Profile", Action?: () => void}) {
+    const userData = JSON.parse(localStorage.getItem("userData") || "{}");
     return (
         <header className="flex items-center rounded-b-lg bg-background p-4 drop-shadow-sm">
             <img className="aspect-square object-cover h-10 w-10 mr-2 rounded-full border-2 border-primary drop-shadow-md" src={For === "Sign" ? Icon : Profile} alt="App Icon" />
-            <h1 className="text-2xl font-semibold font-heading text-primary">{ For === "Sign" ? "Quiz App" : userName }</h1>
+            <h1 className="text-2xl font-semibold font-heading text-primary">{ For === "Sign" ? "Quiz App" : userData.userName }</h1>
             <button className="cursor-pointer border-2 ml-auto border-primary p-0.5 rounded-full active:scale-90 transition-transform">
                 <svg className="text-primary" width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12Z" fill="currentColor"/>

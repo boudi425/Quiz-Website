@@ -8,7 +8,7 @@ import End from "./pages/End.tsx"
 export default function App() {
     return (
         <Routes>
-            <Route path="/sign" element={<Sign />} />
+            <Route path="/" element={<Sign />} />
             <Route path="/home" element={<Home />} />
             <Route path="/play" element={<Play />} />
             <Route path="/end" element={<End />} />

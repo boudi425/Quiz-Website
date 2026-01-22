@@ -1,4 +1,4 @@
-import { Navigate, useLocation } from "react-router-dom"; 
+import { Navigate, useNavigate, useLocation } from "react-router-dom"; 
 import Header from "../components/HeaderFirst";
 import { useState } from "react";
 import {scienceData as Data} from "../data/ScienceFieldsData.ts"
@@ -12,11 +12,12 @@ export default function Home() {
     /*const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let id = 0;*/
     const location = useLocation();
+    const navigate = useNavigate();
     const realData = JSON.parse(localStorage.getItem("userData") || "{}") as UserData;
     const [buttonsContent, setButtonsContent] = useState<string[]>(realData.selectedSubject);
     const [selectedFields, setSelectedFields] = useState<string[]>([]);
     if (Object.keys(realData).length === 0) {
-        return <Navigate to="/sign" replace />;
+        return <Navigate to="/" replace />;
     }
     const toggle = (value: string) => {
     console.log(selectedFields);
@@ -35,11 +36,15 @@ export default function Home() {
         setButtonsContent(realData.selectedSubject);
         setSelectedFields([]);
     }
+    function startQuiz(data: string[]) {
+        console.log("Starting quiz with subjects:", data);
+        navigate("/play", { state: { quizSubjects: data } });
+    }
     console.log("Home Page Loaded");
     console.log(`The Data Give: ${location.state}`);
     return (
         <main>
-            <Header For="Home" Action={() => resetData()}/>
+            <Header For="Profile" Action={() => resetData()}/>
             <div className="container min-h-screen">
                 <section className="flex justify-center flex-col mx-auto px-4 py-8 md:px-24">
                     <h1 className="text-center font-bold text-5xl text-on-surface-variant">Hello, {realData.userName}</h1>
@@ -56,7 +61,7 @@ export default function Home() {
                                 </button>
                             );
                         })}
-                        <button className="btn-primary mt-4 w-50 disabled:bg-primary/5 transition-colors duration-200" disabled={selectedFields.length === 0} onClick={() => alert("Done!")}>Start Quiz!</button>
+                        <button className="btn-primary mt-4 w-50 disabled:bg-primary/5 transition-colors duration-200" disabled={selectedFields.length === 0} onClick={() => startQuiz(selectedFields)}>Start Quiz!</button>
                         {selectedFields.length === 0 && <p className="mt-2 text-error text-center text-bold">Please Select one Item or more!</p>}
                     </div>
                 </section>

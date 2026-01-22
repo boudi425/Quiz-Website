@@ -85,6 +85,12 @@
 }
 @layer components {
     .btn-primary {
-        @apply bg-primary text-on-primary px-4 py-4 w-30 rounded-md dark:bg-dark-primary dark:text-dark-on-primary;
+        @apply flex items-center justify-center bg-primary text-on-primary px-4 py-4 w-30 rounded-md dark:bg-dark-primary dark:text-dark-on-primary;
+    }
+    .btn-primary-2 {
+        @apply flex items-center justify-center bg-primary text-on-primary px-4 py-4 w-50 rounded-md dark:bg-dark-primary dark:text-dark-on-primary;
+    }
+    .btn-secondary {
+        @apply flex items-center justify-center border-outline-variant border-2 text-on-background px-4 py-4 w-50 rounded-md dark:bg-dark-primary dark:text-dark-on-primary;
     }
 }

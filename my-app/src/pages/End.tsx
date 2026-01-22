@@ -1,7 +1,9 @@
-import { useNavigate, Link } from "react-router-dom";
-
+import { useLocation } from "react-router-dom";
+import  ProgressCircle from "../components/scoreCircle.tsx";
 export default function End() {
+    const location = useLocation();
     return <div className="bg-green-500">
-            End game Page
+            {JSON.stringify(location.state.userAnswers)};
+            <ProgressCircle />
         </div>
 }
