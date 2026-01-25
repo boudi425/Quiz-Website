@@ -1,6 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import Header from "../components/HeaderLast"
+import Header from "../components/HeaderLast";
+import ConfirmMessage from "../components/confirmMessage.tsx";
 import { QuizRegistry as QuizBank } from "../data/index.ts";
 import type { SubjectData, Question as QuestionType } from "../data/index.ts";
 import { QuestionText } from "../components/MathInline.tsx";
@@ -59,6 +60,7 @@ export default function Play() {
     }
     const questionMaxTarget = Math.floor(20 / location.state.quizSubjects.length);
     const [questionIndex, setQuestionIndex] = useState(0);
+    const [confirmSubmit, setConfirmSubmit] = useState(false);
     const [currentQuestions, setCurrentQuestions] = useState<userAnswersType>(userAnswers);
     const [questions] = useState<QuestionType[]>(() => {
         return generateQuiz(
@@ -69,6 +71,7 @@ export default function Play() {
     
     localStorage.setItem("userAnswers", JSON.stringify(userAnswers));
     const [toggleHint, setToggleHint] = useState(false);
+    
     const allAnswers = questions.map(q => q.answer);
     function handleButtonClick(option: string, index: number) {
         setCurrentQuestions(prev => ({
@@ -86,9 +89,13 @@ export default function Play() {
             navigate("/end", { state: { answers: allAnswers, userAnswers: currentQuestions } });
         }
     }
+    function closeWindow() {
+        console.log("Closing confirmation window...");
+        setConfirmSubmit(false);
+    }
     return (
         <main>
-            <Header For="Play" />
+            <Header For="Play"/>
             <div className="container min-h-screen">
                 <section className="flex justify-center flex-col mx-auto px-4 py-10 md:px-24">
                     <div className="flex items-center justify-between">
@@ -132,9 +139,14 @@ export default function Play() {
                             </svg>
                         </button>
                     </div>
-                    {questionIndex === questions.length - 1 && <button className="flex items-center justify-center cursor-pointer btn-primary-2" onClick={submitQuiz}>
+                    <div className="flex items-center justify-center flex-col">
+                        {questionIndex === questions.length - 1 && <button className="flex items-center justify-center cursor-pointer mt-4 btn-primary-2" onClick={() => setConfirmSubmit(true)}>
                             Submit Quiz!
-                    </button>}
+                        </button>}
+                        {questionIndex === questions.length - 1 && <p className="text-sm font-sans text-on-surface-variant mt-2">Make sure to review your answers before submitting.</p>}
+                    </div>
+                    <ConfirmMessage Shown={confirmSubmit} onConfirm={submitQuiz} onCancel={closeWindow}/>
+                    
                 </section>
             </div>
             <footer className="text-center text-sm text-on-surface-variant py-3">&copy; 2025 Boudi For Tech</footer>

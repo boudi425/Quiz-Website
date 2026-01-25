@@ -1,7 +1,8 @@
 import { Navigate, useNavigate, useLocation } from "react-router-dom"; 
 import Header from "../components/HeaderFirst";
 import { useState } from "react";
-import {scienceData as Data} from "../data/ScienceFieldsData.ts"
+import {scienceData as Data} from "../data/ScienceFieldsData.ts";
+import SettingsMenu from "../components/settingsMenu.tsx";
 interface UserData {
   userName: string;
   selectedSubject: string[];

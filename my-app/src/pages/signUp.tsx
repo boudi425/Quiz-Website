@@ -21,7 +21,7 @@ export default function App() {
             prev.includes(value) ? prev.filter((item) => item !== value) : [...prev, value]
         );
     }
-    function submitForm(formData: { userName: string; selectedSubject: string[]; selected: string | null }) {
+    function submitForm(formData: { userName: string; selectedSubject: string[]; selected: string | null, profilePicture?: string }) {
 
         if (formData.selectedSubject.length === 0) {
             setNotValid(true);
@@ -45,7 +45,7 @@ export default function App() {
                             placeholder="e.g. Boudi" 
                             onChange={(e) => setUserName(e.target.value)} 
                             required
-                            className="py-3 pl-3 w-full pr-4 text-lg rounded-lg border bg-secondary-container border-tertiary text-on-secondary-container h-14 shadow-sm transition-all duration-300 ease-in-out focus:outline-none focus:border-primary focus:shadow-inset-B" 
+                            className="py-3 pl-3 w-full pr-4 text-lg rounded-lg border bg-secondary-container border-tertiary text-on-secondary-container h-14 shadow-sm transition-all ease-in-out focus:outline-none focus:border-primary focus:shadow-inset-B" 
                         />
                         <p className="text-on-background text-left">Subjects</p>
                         {notValid && <p className="text-error">Please Select at Least one subject</p>}
@@ -57,7 +57,7 @@ export default function App() {
                                         type="button"
                                         key={option}
                                         onClick={() => toggle(option)}
-                                        className={`flex items-center px-4 py-2 border border-secondary text-on-background text-sm transition-all duration-300 ease-in-out ${isSelected ? "rounded-full bg-primary text-on-primary shadow-sm" : "rounded-md hover:bg-primary-container/50 hover:text-on-primary-container hover:shadow-sm"}`}
+                                        className={`flex items-center px-4 py-2 border border-secondary text-on-background text-sm transition-all ease-in-out ${isSelected ? "rounded-full bg-primary text-on-primary shadow-sm" : "rounded-md hover:bg-primary-container/50 hover:text-on-primary-container hover:shadow-sm"}`}
                                     >
                                         {isSelected && <svg className="mr-2 w-6 h-6" viewBox="0 0 1024 1024" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M439.2 680c9.6 8.8 25.6 8.8 35.2-0.8l300-309.6C784 360 784 344 773.6 334.4c-9.6-9.6-25.6-9.6-35.2 0.8L438.4 644.8l35.2-0.8-182.4-167.2c-10.4-9.6-25.6-8.8-35.2 1.6-9.6 10.4-8.8 25.6 1.6 35.2L439.2 680z" fill="" /><path d="M515.2 1007.2c-276 0-500-224-500-500S239.2 7.2 515.2 7.2s500 224 500 500-224 500-500 500z m0-952C265.6 55.2 63.2 257.6 63.2 507.2s202.4 452 452 452 452-202.4 452-452S764.8 55.2 515.2 55.2z" fill="" />

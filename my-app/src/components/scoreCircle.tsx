@@ -1,14 +1,15 @@
 const ProgressCircle = ({
   value = 19,
   max = 20,
-  size = 180,
+  size = 200,
 }) => {
   const strokeBg = 8
   const strokeProgress = 12
   const radius = (size - strokeProgress) / 2
   const circumference = 2 * Math.PI * radius
   const progress = value / max
-  const offset = circumference * (1 - progress)
+  const offset = circumference * (1 - progress);
+  const percent = Math.round(progress * 100);
 
   return (
     <div className="relative flex items-center justify-center">
@@ -44,7 +45,7 @@ const ProgressCircle = ({
 
       {/* Center content */}
       <div className="absolute text-3xl font-semibold text-black">
-        {value}/{max}
+        {percent}%
       </div>
     </div>
   )
