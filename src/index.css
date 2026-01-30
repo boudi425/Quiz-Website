@@ -133,9 +133,9 @@
     @apply flex items-center justify-center bg-primary text-on-primary px-4 py-4 w-50 rounded-lg dark:bg-dark-primary dark:text-dark-on-primary hover:shadow-md;
   }
   .btn-secondary {
-    @apply flex items-center justify-center border-outline-variant border-2 text-on-background px-4 py-4 w-50 rounded-lg dark:border-dark-primary dark:bg-dark-primary-container dark:text-dark-on-primary-container hover:shadow-md;
+    @apply flex items-center justify-center border-outline-variant border-2 text-on-background px-4 py-4 w-50 rounded-lg dark:border-dark-outline-variant dark:text-dark-on-background hover:shadow-md;
   }
   .btn-secondary-2 {
-    @apply flex items-center justify-center border-primary border-2 bg-primary-container text-on-primary-container px-4 py-4 w-50 rounded-lg dark:border-dark-primary dark:text-dark-on-background hover:shadow-md;
+    @apply flex items-center justify-center border-primary border-2 bg-primary-container text-on-primary-container px-4 py-4 w-50 rounded-lg dark:border-dark-primary dark:bg-dark-primary-container dark:text-dark-on-background hover:shadow-md;
   }
 }

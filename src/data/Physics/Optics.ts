@@ -45,7 +45,7 @@ export const opticsQuestions = {
     ],
     Hard: [
         { id: 0, question: "What do the 'Fresnel Equations' describe?", options: ["Star motion", "Reflection and transmission of EM waves at an interface", "Nuclear decay", "Heat transfer"], answer: "Reflection and transmission of EM waves at an interface", hint: "They use coefficients for s and p polarization." },
-        { id: 1, question: "The 'Rayleigh Criterion' defines the limit of:", options: ["Speed", "Angular resolution", "Mass", "Temperature"], answer: "Angular resolution", hint: "$\theta \approx 1.22 \lambda / D$." },
+        { id: 1, question: "The 'Rayleigh Criterion' defines the limit of:", options: ["Speed", "Angular resolution", "Mass", "Temperature"], answer: "Angular resolution", hint: "$\\theta \\approx 1.22 \\lambda / D$." },
         { id: 2, question: "What is 'Birefringence'?", options: ["Double refraction", "Two shadows", "No reflection", "A broken lens"], answer: "Double refraction", hint: "Occurs in materials like calcite where $n$ depends on polarization." },
         { id: 3, question: "What does the 'Michelson Interferometer' measure?", options: ["Small distances or changes in $n$ using interference", "Star mass", "Current", "Pressure"], answer: "Small distances or changes in $n$ using interference", hint: "Used in the famous Michelson-Morley experiment." },
         { id: 4, question: "What is 'Fourier Optics'?", options: ["Drawing lenses", "Using Fourier transforms to analyze light patterns", "Building telescopes", "Cooking with light"], answer: "Using Fourier transforms to analyze light patterns", hint: "Treats a lens as a Fourier transform engine." },

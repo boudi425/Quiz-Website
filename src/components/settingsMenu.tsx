@@ -55,7 +55,7 @@ export default function SettingsMenu({isOpen, handleSave, handleCancel}: {isOpen
             userName: userName,
             selectedSubject: selectedSubject,
             selected: selectedDifficulty,
-            profilePicture: fileName
+            profilePicture: fileName 
         };
         setIsValid(true);
         localStorage.setItem("userData", JSON.stringify(updatedData));

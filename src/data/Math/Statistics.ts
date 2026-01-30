@@ -144,16 +144,16 @@ export const statisticsQuestions = {
     Medium: [
         {
             id: 0,
-            question: "What is the formula for the variance ($\sigma^2$) of a population?",
-            options: ["$\sum (x - \mu) / n$", "$\sum (x - \mu)^2 / n$", "$\sqrt{\sum (x - \mu)^2 / n}$", "$\sum x / n$"],
-            answer: "$\sum (x - \mu)^2 / n$",
+            question: "What is the formula for the variance ($\\sigma^2$) of a population?",
+            options: ["$\\sum (x - \\mu) / n$", "$\\sum (x - \\mu)^2 / n$", "$\\sqrt{\\sum (x - \\mu)^2 / n}$", "$\\sum x / n$"],
+            answer: "$\\sum (x - \\mu)^2 / n$",
             hint: "It is the average of the squared deviations from the mean."
         },
         {
             id: 1,
             question: "In a standard normal distribution, what are the mean and standard deviation?",
-            options: ["$\mu=1, \sigma=0$", "$\mu=0, \sigma=1$", "$\mu=1, \sigma=1$", "$\mu=0, \sigma=0$"],
-            answer: "$\mu=0, \sigma=1$",
+            options: ["$\\mu=1, \\sigma=0$", "$\\mu=0, \\sigma=1$", "$\\mu=1, \\sigma=1$", "$\\mu=0, \\sigma=0$"],
+            answer: "$\\mu=0, \\sigma=1$",
             hint: "This is also known as the Z-distribution."
         },
         {
@@ -168,14 +168,14 @@ export const statisticsQuestions = {
             question: "What does a 'z-score' represent?",
             options: ["The mean of the data", "The number of standard deviations a value is from the mean", "The probability of an event", "the area under a curve"],
             answer: "The number of standard deviations a value is from the mean",
-            hint: "Formula: $z = (x - \mu) / \sigma$."
+            hint: "Formula: $z = (x - \\mu) / \\sigma$."
         },
         {
             id: 4,
-            question: "If $P(A) = 0.3$ and $P(B) = 0.4$, and $A$ and $B$ are independent, what is $P(A \cap B)$?",
+            question: "If $P(A) = 0.3$ and $P(B) = 0.4$, and $A$ and $B$ are independent, what is $P(A \\cap B)$?",
             options: ["0.7", "0.1", "0.12", "0.35"],
             answer: "0.12",
-            hint: "For independent events, $P(A \cap B) = P(A) \times P(B)$."
+            hint: "For independent events, $P(A \\cap B) = P(A) \\times P(B)$."
         },
         {
             id: 5,
@@ -222,8 +222,8 @@ export const statisticsQuestions = {
         {
             id: 11,
             question: "What is the formula for calculating a Z-score?",
-            options: ["$(x - \mu) / \sigma$", "$(x + \mu) / \sigma$", "$\sigma / \sqrt{n}$", "$\mu / \sigma$"],
-            answer: "$(x - \mu) / \sigma$",
+            options: ["$(x - \\mu) / \\sigma$", "$(x + \\mu) / \\sigma$", "$\\sigma / \\sqrt{n}$", "$\\mu / \\sigma$"],
+            answer: "$(x - \\mu) / \\sigma$",
             hint: "Value minus mean, all divided by standard deviation."
         },
         {
@@ -243,8 +243,8 @@ export const statisticsQuestions = {
         {
             id: 14,
             question: "The 'Standard Error' of the mean is calculated as:",
-            options: ["$\sigma \times n$", "$\sigma / \sqrt{n}$", "$\sigma^2 / n$", "$\sqrt{\sigma}$"],
-            answer: "$\sigma / \sqrt{n}$",
+            options: ["$\\sigma \\times n$", "$\\sigma / \\sqrt{n}$", "$\\sigma^2 / n$", "$\\sqrt{\\sigma}$"],
+            answer: "$\\sigma / \\sqrt{n}$",
             hint: "It decreases as the sample size $n$ increases."
         },
         {
@@ -266,12 +266,12 @@ export const statisticsQuestions = {
             question: "If a p-value is 0.03 and the alpha level is 0.05, you should:",
             options: ["Reject the null hypothesis", "Fail to reject the null hypothesis", "Accept the null hypothesis", "Redo the experiment"],
             answer: "Reject the null hypothesis",
-            hint: "If the p-value is low ($< \alpha$), the result is statistically significant."
+            hint: "If the p-value is low ($< \\alpha$), the result is statistically significant."
         },
         {
             id: 18,
             question: "What is the 'Degrees of Freedom' for a sample of size $n$ when calculating variance?",
-            options: ["$n$", "$n-1$", "$n+1$", "$\sqrt{n}$"],
+            options: ["$n$", "$n-1$", "$n+1$", "$\\sqrt{n}$"],
             answer: "$n-1$",
             hint: "Using $n-1$ instead of $n$ provides an unbiased estimate for samples."
         },
@@ -321,7 +321,7 @@ export const statisticsQuestions = {
         },
         {
             id: 5,
-            question: "What is 'Power' in statistics ($1 - \beta$)?",
+            question: "What is 'Power' in statistics ($1 - \\beta$)?",
             options: ["The probability of a Type I error", "The probability of correctly rejecting a false null hypothesis", "The strength of the correlation", "The size of the population"],
             answer: "The probability of correctly rejecting a false null hypothesis",
             hint: "It is the ability of a test to detect an effect if it actually exists."
@@ -377,10 +377,10 @@ export const statisticsQuestions = {
         },
         {
             id: 13,
-            question: "In a 'Poisson Distribution', the mean ($\lambda$) is equal to:",
+            question: "In a 'Poisson Distribution', the mean ($\\lambda$) is equal to:",
             options: ["The standard deviation", "The variance", "The median", "1"],
             answer: "The variance",
-            hint: "This is a unique property where $\mu = \sigma^2$."
+            hint: "This is a unique property where $\\mu = \\sigma^2$."
         },
         {
             id: 14,
@@ -422,7 +422,7 @@ export const statisticsQuestions = {
             question: "What is the 'Central Moment' of order 1?",
             options: ["The Variance", "The Mean", "Zero", "The Skewness"],
             answer: "Zero",
-            hint: "It is the average of $(x - \text{mean})^1$."
+            hint: "It is the average of $(x - \\text{mean})^1$."
         }
     ]
 };

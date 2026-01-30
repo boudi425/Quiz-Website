@@ -12,7 +12,7 @@ export const linearAlgebraQuestions = {
             question: "What is the size of a matrix with 3 rows and 2 columns?",
             options: ["2x3", "3x2", "3x3", "6"],
             answer: "3x2",
-            hint: "Matrix dimensions are always written as rows $\times$ columns."
+            hint: "Matrix dimensions are always written as rows $\\times$ columns."
         },
         {
             id: 2,
@@ -44,7 +44,7 @@ export const linearAlgebraQuestions = {
         },
         {
             id: 6,
-            question: "If matrix $A$ is $2 \times 3$ and matrix $B$ is $2 \times 3$, what is the dimension of $A + B$?",
+            question: "If matrix $A$ is $2 \\times 3$ and matrix $B$ is $2 \\times 3$, what is the dimension of $A + B$?",
             options: ["2x3", "3x2", "4x6", "2x2"],
             answer: "2x3",
             hint: "Matrix addition does not change the dimensions."
@@ -59,7 +59,7 @@ export const linearAlgebraQuestions = {
         {
             id: 8,
             question: "What is the magnitude of a unit vector?",
-            options: ["0", "1", "$\pi$", "Variable"],
+            options: ["0", "1", "$\\pi$", "Variable"],
             answer: "1",
             hint: "The term 'unit' refers to a value of one."
         },
@@ -68,7 +68,7 @@ export const linearAlgebraQuestions = {
             question: "What is the dot product of the vectors $[1, 0]$ and $[0, 1]$?",
             options: ["1", "0", "2", "-1"],
             answer: "0",
-            hint: "$a \cdot b = (1 \times 0) + (0 \times 1)$."
+            hint: "$a \\cdot b = (1 \\times 0) + (0 \\times 1)$."
         },
         {
             id: 10,
@@ -79,7 +79,7 @@ export const linearAlgebraQuestions = {
         },
         {
             id: 11,
-            question: "In the matrix $A = \begin{bmatrix} 5 & 2 \\ 1 & 8 \end{bmatrix}$, what is the element $a_{21}$?",
+            question: "In the matrix $A = \\begin{bmatrix} 5 & 2 \\ 1 & 8 \\end{bmatrix}$, what is the element $a_{21}$?",
             options: ["5", "2", "1", "8"],
             answer: "1",
             hint: "The first index is the row, the second is the column."
@@ -103,7 +103,7 @@ export const linearAlgebraQuestions = {
             question: "What is the main diagonal of a matrix?",
             options: ["Top-left to bottom-right", "Top-right to bottom-left", "The first row", "The last column"],
             answer: "Top-left to bottom-right",
-            hint: "It contains elements like $a_{11}, a_{22}, \dots$."
+            hint: "It contains elements like $a_{11}, a_{22}, \\dots$."
         },
         {
             id: 15,
@@ -128,14 +128,14 @@ export const linearAlgebraQuestions = {
         },
         {
             id: 18,
-            question: "Can you add a $2 \times 2$ matrix and a $3 \times 3$ matrix?",
+            question: "Can you add a $2 \\times 2$ matrix and a $3 \\times 3$ matrix?",
             options: ["Yes", "No", "Only if they are Identity matrices", "Only if one is a zero matrix"],
             answer: "No",
             hint: "Dimensions must match exactly for addition."
         },
         {
             id: 19,
-            question: "A $1 \times 1$ matrix is essentially a:",
+            question: "A $1 \\times 1$ matrix is essentially a:",
             options: ["Vector", "Scalar", "Identity", "Zero"],
             answer: "Scalar",
             hint: "It contains only a single numerical value."
@@ -144,16 +144,16 @@ export const linearAlgebraQuestions = {
     Medium: [
         {
             id: 0,
-            question: "What is the determinant of the matrix $\begin{bmatrix} a & b \\ c & d \end{bmatrix}$?",
+            question: "What is the determinant of the matrix $\\begin{bmatrix} a & b \\ c & d \\end{bmatrix}$?",
             options: ["$ab - cd$", "$ad - bc$", "$ad + bc$", "$ac - bd$"],
             answer: "$ad - bc$",
             hint: "Multiply the main diagonal and subtract the product of the other diagonal."
         },
         {
             id: 1,
-            question: "If matrix $A$ is $m \times n$ and matrix $B$ is $n \times p$, what is the size of the product $AB$?",
-            options: ["$m \times p$", "$n \times n$", "$m \times n$", "$p \times m$"],
-            answer: "$m \times p$",
+            question: "If matrix $A$ is $m \\times n$ and matrix $B$ is $n \\times p$, what is the size of the product $AB$?",
+            options: ["$m \\times p$", "$n \\times n$", "$m \\times n$", "$p \\times m$"],
+            answer: "$m \\times p$",
             hint: "The inner dimensions 'cancel out' for multiplication."
         },
         {
@@ -168,13 +168,13 @@ export const linearAlgebraQuestions = {
             question: "Which property does matrix multiplication NOT generally satisfy?",
             options: ["Associative", "Distributive", "Commutative", "Identity"],
             answer: "Commutative",
-            hint: "Usually, $AB \neq BA$."
+            hint: "Usually, $AB \\neq BA$."
         },
         {
             id: 4,
             question: "What is the condition for a square matrix $A$ to have an inverse?",
-            options: ["$det(A) = 0$", "$det(A) \neq 0$", "$tr(A) = 1$", "$A$ is a zero matrix"],
-            answer: "$det(A) \neq 0$",
+            options: ["$det(A) = 0$", "$det(A) \\neq 0$", "$tr(A) = 1$", "$A$ is a zero matrix"],
+            answer: "$det(A) \\neq 0$",
             hint: "If the determinant is zero, the matrix is 'singular'."
         },
         {
@@ -182,7 +182,7 @@ export const linearAlgebraQuestions = {
             question: "The dot product of two vectors is zero. What does this imply?",
             options: ["The vectors are parallel", "The vectors are orthogonal", "One vector is the identity", "The vectors are the same"],
             answer: "The vectors are orthogonal",
-            hint: "Orthogonal means they meet at a $90^\circ$ angle."
+            hint: "Orthogonal means they meet at a $90^\\circ$ angle."
         },
         {
             id: 6,
@@ -200,14 +200,14 @@ export const linearAlgebraQuestions = {
         },
         {
             id: 8,
-            question: "What is the determinant of a $3 \times 3$ Identity matrix?",
+            question: "What is the determinant of a $3 \\times 3$ Identity matrix?",
             options: ["0", "1", "3", "9"],
             answer: "1",
             hint: "The determinant of any identity matrix is always 1."
         },
         {
             id: 9,
-            question: "If $A$ is a $3 \times 3$ matrix and $det(A) = 5$, what is $det(2A)$?",
+            question: "If $A$ is a $3 \\times 3$ matrix and $det(A) = 5$, what is $det(2A)$?",
             options: ["10", "20", "40", "5"],
             answer: "40",
             hint: "Formula: $det(kA) = k^n det(A)$, where $n$ is the dimension."
@@ -217,7 +217,7 @@ export const linearAlgebraQuestions = {
             question: "What is the cross product of two parallel vectors?",
             options: ["1", "A unit vector", "The Zero vector", "The Identity matrix"],
             answer: "The Zero vector",
-            hint: "Cross product magnitude involves $\sin(\theta)$; $\sin(0) = 0$."
+            hint: "Cross product magnitude involves $\\sin(\\theta)$; $\\sin(0) = 0$."
         },
         {
             id: 11,
@@ -228,9 +228,9 @@ export const linearAlgebraQuestions = {
         },
         {
             id: 12,
-            question: "What is the inverse of the matrix $\begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}$?",
-            options: ["$\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$", "$\begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}$", "$\begin{bmatrix} -1 & 0 \\ 0 & -1 \end{bmatrix}$", "None"],
-            answer: "$\begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}$",
+            question: "What is the inverse of the matrix $\\begin{bmatrix} 1 & 0 \\ 0 & 1 \\end{bmatrix}$?",
+            options: ["$\\begin{bmatrix} 0 & 1 \\ 1 & 0 \\end{bmatrix}$", "$\\begin{bmatrix} 1 & 0 \\ 0 & 1 \\end{bmatrix}$", "$\\begin{bmatrix} -1 & 0 \\ 0 & -1 \\end{bmatrix}$", "None"],
+            answer: "$\\begin{bmatrix} 1 & 0 \\ 0 & 1 \\end{bmatrix}$",
             hint: "The identity matrix is its own inverse."
         },
         {
@@ -242,7 +242,7 @@ export const linearAlgebraQuestions = {
         },
         {
             id: 14,
-            question: "What is the rank of a $3 \times 3$ zero matrix?",
+            question: "What is the rank of a $3 \\times 3$ zero matrix?",
             options: ["0", "1", "3", "Undefined"],
             answer: "0",
             hint: "Rank is the number of linearly independent rows/columns."
@@ -259,7 +259,7 @@ export const linearAlgebraQuestions = {
             question: "What is the length (norm) of the vector $[3, 4]$?",
             options: ["5", "7", "12", "25"],
             answer: "5",
-            hint: "$\sqrt{3^2 + 4^2}$."
+            hint: "$\\sqrt{3^2 + 4^2}$."
         },
         {
             id: 17,
@@ -286,15 +286,15 @@ export const linearAlgebraQuestions = {
     Hard: [
         {
             id: 0,
-            question: "What is the equation used to find eigenvalues $\lambda$ for matrix $A$?",
-            options: ["$Av = \lambda$", "$det(A - \lambda I) = 0$", "$tr(A) = \lambda$", "$A^2 = \lambda I$"],
-            answer: "$det(A - \lambda I) = 0$",
+            question: "What is the equation used to find eigenvalues $\\lambda$ for matrix $A$?",
+            options: ["$Av = \\lambda$", "$det(A - \\lambda I) = 0$", "$tr(A) = \\lambda$", "$A^2 = \\lambda I$"],
+            answer: "$det(A - \\lambda I) = 0$",
             hint: "This is called the characteristic equation."
         },
         {
             id: 1,
-            question: "What does the Rank-Nullity Theorem state for an $m \times n$ matrix $A$?",
-            options: ["$rank(A) + nullity(A) = n$", "$rank(A) + nullity(A) = m$", "$rank(A) = nullity(A)$", "$rank(A) \times nullity(A) = n$"],
+            question: "What does the Rank-Nullity Theorem state for an $m \\times n$ matrix $A$?",
+            options: ["$rank(A) + nullity(A) = n$", "$rank(A) + nullity(A) = m$", "$rank(A) = nullity(A)$", "$rank(A) \\times nullity(A) = n$"],
             answer: "$rank(A) + nullity(A) = n$",
             hint: "The sum of dimensions of the image and the kernel equals the number of columns."
         },
@@ -338,13 +338,13 @@ export const linearAlgebraQuestions = {
             question: "What is the Cayley-Hamilton Theorem?",
             options: ["Every matrix has a determinant", "Every matrix satisfies its own characteristic equation", "$A B = B A$ for square matrices", "$Rank = Nullity$"],
             answer: "Every matrix satisfies its own characteristic equation",
-            hint: "If $p(\lambda)$ is the characteristic polynomial, then $p(A)$ is the zero matrix."
+            hint: "If $p(\\lambda)$ is the characteristic polynomial, then $p(A)$ is the zero matrix."
         },
         {
             id: 8,
             question: "The projection of vector $u$ onto vector $v$ is given by:",
-            options: ["$\frac{u \cdot v}{||v||^2} v$", "$\frac{u \cdot v}{||u||} v$", "$u \times v$", "$u + v$"],
-            answer: "$\frac{u \cdot v}{||v||^2} v$",
+            options: ["$\\frac{u \\cdot v}{||v||^2} v$", "$\\frac{u \\cdot v}{||u||} v$", "$u \\times v$", "$u + v$"],
+            answer: "$\\frac{u \\cdot v}{||v||^2} v$",
             hint: "It's the component of $u$ that lies in the direction of $v$."
         },
         {
@@ -352,7 +352,7 @@ export const linearAlgebraQuestions = {
             question: "What is the algebraic multiplicity of an eigenvalue?",
             options: ["The number of eigenvectors it has", "The number of times it appears as a root of the characteristic polynomial", "The value of the eigenvalue", "The dimension of the kernel"],
             answer: "The number of times it appears as a root of the characteristic polynomial",
-            hint: "It refers to the multiplicity of the root in $det(A - \lambda I) = 0$."
+            hint: "It refers to the multiplicity of the root in $det(A - \\lambda I) = 0$."
         },
         {
             id: 10,
@@ -363,7 +363,7 @@ export const linearAlgebraQuestions = {
         },
         {
             id: 11,
-            question: "If the columns of a $4 \times 4$ matrix are linearly independent, what is its rank?",
+            question: "If the columns of a $4 \\times 4$ matrix are linearly independent, what is its rank?",
             options: ["1", "2", "3", "4"],
             answer: "4",
             hint: "If columns are independent, the matrix is full rank."
@@ -385,8 +385,8 @@ export const linearAlgebraQuestions = {
         {
             id: 14,
             question: "What is the Singular Value Decomposition (SVD) of a matrix $A$?",
-            options: ["$A = LU$", "$A = U \Sigma V^T$", "$A = QR$", "$A = PDP^{-1}$"],
-            answer: "$A = U \Sigma V^T$",
+            options: ["$A = LU$", "$A = U \\Sigma V^T$", "$A = QR$", "$A = PDP^{-1}$"],
+            answer: "$A = U \\Sigma V^T$",
             hint: "It decomposes any matrix into rotation, scaling, and rotation."
         },
         {
@@ -398,7 +398,7 @@ export const linearAlgebraQuestions = {
         },
         {
             id: 16,
-            question: "What is the dimension of the vector space of all $2 \times 2$ matrices?",
+            question: "What is the dimension of the vector space of all $2 \\times 2$ matrices?",
             options: ["2", "4", "8", "Infinite"],
             answer: "4",
             hint: "There are four independent positions to fill in the matrix."
@@ -412,9 +412,9 @@ export const linearAlgebraQuestions = {
         },
         {
             id: 18,
-            question: "If $\lambda$ is an eigenvalue of $A$, what is an eigenvalue of $A^n$?",
-            options: ["$n\lambda$", "$\lambda^n$", "$\lambda / n$", "$\lambda + n$"],
-            answer: "$\lambda^n$",
+            question: "If $\\lambda$ is an eigenvalue of $A$, what is an eigenvalue of $A^n$?",
+            options: ["$n\\lambda$", "$\\lambda^n$", "$\\lambda / n$", "$\\lambda + n$"],
+            answer: "$\\lambda^n$",
             hint: "Repeated transformations scale the eigenvector repeatedly."
         },
         {

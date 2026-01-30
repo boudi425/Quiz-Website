@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export const QuizTimer = ({ minutes = 10, Shown, onTimeUp }: { minutes: number; Shown: boolean; onTimeUp: () => void }) => {
+export const QuizTimer = ({ minutes = 20, Shown, onTimeUp}: { minutes: number; Shown: boolean; onTimeUp: () => void, Data?: string[] }) => {
   // 1. Set the target "End Time" once when the component mounts
   const [endTime] = useState(() => Date.now() + minutes * 60 * 1000);
   const [timeLeft, setTimeLeft] = useState(minutes * 60);

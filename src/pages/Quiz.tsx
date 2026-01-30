@@ -6,7 +6,7 @@ import { QuizRegistry as QuizBank } from "../data/index";
 import type { Question as QuestionType, SubjectKey } from "../data/index";
 import { QuestionText } from "../components/MathInline.tsx";
 
-type UserAnswersType = { [key: number]: string };
+export type UserAnswersType = { [key: number]: string };
 
 function shuffle<T>(array: T[]): T[] {
     const arr = [...array];
@@ -114,7 +114,12 @@ export default function Quiz() {
     if (loading || !questions.length) {
         return (
             <main>
-                <Header For="Play" />
+                <Header For="Play" 
+                TrueAnswers={allAnswers} 
+                UserAnswers={currentQuestions} 
+                Questions={questions} 
+                subjectNames={state?.subjectsNames}
+                />
                 <div className="container min-h-screen flex items-center justify-center gap-4">
                     <div className="w-8 h-8 rounded-full border-4 border-on-surface-variant/30 dark:border-dark-on-surface-variant/30 border-t-on-surface-variant dark:border-t-dark-on-surface-variant animate-spin" />
                     <p className="text-xl text-on-surface-variant dark:text-dark-on-surface-variant">Loading quiz…</p>
