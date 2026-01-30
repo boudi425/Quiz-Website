@@ -66,7 +66,7 @@ This project is a **science quiz platform** built as a single-page application. 
 
 You can try the live version of this quiz app here. Feel free to explore the subjects, change difficulty, and use the answer review to see how it works.
 
-**[Add your link here]**
+**[(https://quiz-website-opal.vercel.app/)]**
 
 ---
 
