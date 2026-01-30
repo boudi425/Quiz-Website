@@ -24,7 +24,8 @@ const ProgressCircle = ({
           cy={size / 2}
           r={radius}
           fill="none"
-          stroke="#e5eadf"
+          stroke="currentColor"
+          className="text-outline-variant dark:text-dark-outline-variant"
           strokeWidth={strokeBg}
         />
 
@@ -34,17 +35,17 @@ const ProgressCircle = ({
           cy={size / 2}
           r={radius}
           fill="none"
-          stroke="#2f6f4e"
+          stroke="currentColor"
+          className="text-primary dark:text-dark-primary transition-all duration-700 ease-out"
           strokeWidth={strokeProgress}
           strokeLinecap="round"
           strokeDasharray={circumference}
           strokeDashoffset={offset}
-          className="transition-all duration-700 ease-out"
         />
       </svg>
 
       {/* Center content */}
-      <div className="absolute text-3xl font-semibold text-black">
+      <div className="absolute text-3xl font-semibold text-on-background dark:text-dark-on-background">
         {percent}%
       </div>
     </div>
