@@ -109,7 +109,7 @@ export default function App() {
                                     </div>
                             )}
                         </Combobox>
-                        <button className="btn-primary" type="submit">Start Quiz!</button>
+                        <button className="btn-primary cursor-pointer" type="submit">Start Quiz!</button>
                     </form>
                 </section>
             </div>
