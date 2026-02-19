@@ -48,7 +48,7 @@ export default function Result() {
     return (
         <main>
             <Header For="End" handleClick={() => setIsOpenSettings(!isOpenSettings)}/>
-            <div className="container min-h-screen">
+            <div className="min-h-screen">
                 <section className="flex justify-center flex-col mx-auto px-4 py-10 md:px-24">
                     <ProgressCircle value={score} max={location.state?.answers.length} />
                     <h2 className="text-on-surface-variant dark:text-dark-on-surface-variant text-2xl font-semibold text-center mt-6">You scored {score} out of {location.state?.answers.length}</h2>

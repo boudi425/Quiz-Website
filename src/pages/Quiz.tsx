@@ -135,8 +135,8 @@ export default function Quiz() {
     return (
         <main>
             <Header For="Play"/>
-            <div className="container min-h-screen">
-                <section className="flex justify-center flex-col mx-auto px-4 py-20 md:px-24">
+            <div className="min-h-screen">
+                <section className="flex justify-center flex-col mx-auto px-4 py-16 md:px-24">
                     <div className="flex items-center justify-between">
                         <p className="text-xl font-semibold">Question {questionIndex + 1} of {questions.length}</p>
                         <span onClick={() => setToggleHint((prev) => !prev)} className="cursor-pointer relative flex items-center justify-center rounded-full w-9 h-9 text-xl font-semibold bg-tertiary text-on-tertiary dark:bg-dark-tertiary dark:text-dark-on-tertiary hover:scale-105 hover:shadow-md transition-all">
@@ -152,7 +152,7 @@ export default function Quiz() {
                     </div>
                     <div className="mb-6">
                         <p>Choose From the Following the correct answer:</p>
-                        <div>
+                        <div className="md:grid md:grid-cols-2 gap-2 mt-3">
                             {current.options.map((option, idx) => {
                                 const isSelected = option === currentQuestions[questionIndex + 1];
                                 return (
@@ -171,13 +171,13 @@ export default function Quiz() {
                         </div>
                     </div>
                     <div className="flex items-center justify-center gap-2 w-full mt-6">
-                        <button className="flex items-center justify-center cursor-pointer btn-secondary" onClick={() => questionIndex > 0 && setQuestionIndex(questionIndex - 1)}>
+                        <button className="flex items-center justify-center cursor-pointer btn-secondary active:scale-95 transition-transform" onClick={() => questionIndex > 0 && setQuestionIndex(questionIndex - 1)}>
                             <svg className="text-on-surface-variant dark:text-dark-on-surface-variant" width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M15 6L9 12L15 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                             </svg>
                             Prev
                         </button>
-                        <button className="flex items-center justify-center cursor-pointer btn-primary-2" onClick={() => questionIndex < questions.length - 1 && setQuestionIndex(questionIndex + 1)}>
+                        <button className="flex items-center justify-center cursor-pointer btn-primary-2 active:scale-95 transition-transform" onClick={() => questionIndex < questions.length - 1 && setQuestionIndex(questionIndex + 1)}>
                             Next
                             <svg className="text-on-primary dark:text-dark-on-primary" width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9 6L15 12L9 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
