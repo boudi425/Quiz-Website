@@ -62,8 +62,8 @@ export default function SettingsMenu({isOpen, handleSave, handleCancel}: {isOpen
         handleSave();
     }
     return (
-        <div className={`${isOpen ? 'flex' : 'hidden'} z-50 inset-0 bg-black/75 fixed flex items-center justify-center p-6`}>
-            <div className={`bg-background dark:bg-dark-background rounded-lg p-6 w-90 shadow-lg ${isValid ? '' : 'border-2 border-error dark:border-dark-error' } max-w-md w-full`}>
+        <div className={`${isOpen ? 'flex' : 'hidden'} z-50 inset-0 bg-black/75 fixed flex items-center justify-center px-6 md:px-24 py-10`}>
+            <div className={`bg-background dark:bg-dark-background rounded-lg p-6 w-full md:max-w-3/4 md:max-h-150 overflow-y-auto shadow-lg ${isValid ? '' : 'border-2 border-error dark:border-dark-error' } max-w-md w-full`}>
                 <h2 className="text-on-background dark:text-dark-on-background text-xl font-semibold mb-4">Settings</h2>
                 <p className={`text-error dark:text-dark-error text-xs font-semibold mb-4 ${isValid ? 'hidden' : ''}`}>You have to fill the input and choose at least one subject!</p>
                 <div>

@@ -42,8 +42,8 @@ export default function App() {
     return ( 
         <main>
             <Header For="Sign" />
-            <div className="container min-h-screen">
-                <section className="flex justify-center flex-col mx-auto px-4 py-8 md:px-24">
+            <div className="min-h-screen px-4 py-8 md:px-24 lg:px-24">
+                <section className="flex justify-center items-center flex-col">
                     <h1 className="text-center font-bold text-5xl text-on-surface-variant dark:text-dark-on-surface-variant">Sign Up</h1>
                     <p className="text-center font-semiBold text-2xl text-on-surface-variant dark:text-dark-on-surface-variant mt-2">Personalize your quizzes to match your goals</p>
                     <form onSubmit={(e) => { e.preventDefault(); submitForm({ userName, selectedSubject, selected }); }} className={`bg-background dark:bg-dark-background rounded-lg flex flex-col mt-8 gap-4 px-4 py-6 drop-shadow-sm items-center transition-all ${notValid ? "border-2 border-error dark:border-dark-error" : ""}`}>
